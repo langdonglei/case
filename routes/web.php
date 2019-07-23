@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/a',function(){
-    return 'abc';
+Route::get('/deploy',function(){
+    $a=file_get_contents("php://input");
+    var_dump($a);
 });
