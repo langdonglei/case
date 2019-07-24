@@ -1,10 +1,7 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::any('/deploy',function(Illuminate\http\Request $request){
+# github自动部署
+Route::any('/deploy',function(){
     $s1=$_SERVER['HTTP_X_HUB_SIGNATURE'];
     $s2='sha1='.hash_hmac('sha1',file_get_contents('php://input'),$_ENV['GITHUB_WEBHOOK_SECRET']);
     if($s1==$s2){
@@ -16,5 +13,8 @@ Route::any('/deploy',function(Illuminate\http\Request $request){
         fclose($pipes[2]);
         proc_close($proc);
     }
+});
 
+Route::get('/', function () {
+    return view('welcome');
 });
