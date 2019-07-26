@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit30450a2fe24264bae144f3c96daef5e9
+class ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -2660,6 +2660,7 @@ class ComposerStaticInit30450a2fe24264bae144f3c96daef5e9
         'PHP_Token_CLOSE_SQUARE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_CLOSE_TAG' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_COALESCE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_COALESCE_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_COLON' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_COMMA' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_COMMENT' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -2705,6 +2706,7 @@ class ComposerStaticInit30450a2fe24264bae144f3c96daef5e9
         'PHP_Token_FILE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_FINAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_FINALLY' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_FN' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_FOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_FOREACH' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_FUNCTION' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -4334,11 +4336,11 @@ class ComposerStaticInit30450a2fe24264bae144f3c96daef5e9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit30450a2fe24264bae144f3c96daef5e9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit30450a2fe24264bae144f3c96daef5e9::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit30450a2fe24264bae144f3c96daef5e9::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit30450a2fe24264bae144f3c96daef5e9::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit30450a2fe24264bae144f3c96daef5e9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit12f94ec8ff2c7bff3a9f425c4782aa76::$classMap;
 
         }, null, ClassLoader::class);
     }

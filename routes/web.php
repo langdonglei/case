@@ -1,5 +1,4 @@
 <?php
-
 # github自动部署
 Route::any('/deploy',function(){
     $s1=$_SERVER['HTTP_X_HUB_SIGNATURE'];
@@ -16,5 +15,21 @@ Route::any('/deploy',function(){
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test');
 });
+
+// 后台路由
+Route::get('/admin', function () {
+    return redirect('/admin/post');
+});
+Route::middleware('auth')->namespace('Admin')->group(function () {
+    Route::resource('admin/post', 'PostController');
+    Route::resource('admin/tag', 'TagController');
+    Route::get('admin/upload', 'UploadController@index');
+});
+
+// 登录退出
+Route::get('/admin/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/admin/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/admin/login', 'Auth\LoginController@login');
+
