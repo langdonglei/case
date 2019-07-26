@@ -13,10 +13,16 @@ Route::any('/deploy',function(){
         proc_close($proc);
     }
 });
-
 Route::get('/', function () {
-    return view('test');
+    return redirect('/stage');
 });
+Route::get('/stage', function () {
+    return redirect('/stage/index');
+});
+
+Route::get('/stage/index','Stage\HomeController@index')->name('stage.index');
+Route::get('/stage/show/{slug}','Stage\HomeController@show')->name('stage.show');
+
 
 // 后台路由
 Route::get('/admin', function () {
