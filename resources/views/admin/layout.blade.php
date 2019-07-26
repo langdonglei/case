@@ -8,7 +8,6 @@
     <title>{{ config('blog.title') }} 管理后台</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
-
 </head>
 <body>
 {{-- Navigation Bar --}}
@@ -19,7 +18,6 @@
                 aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbar-menu">
             @include('admin.partials.navbar')
         </div>
