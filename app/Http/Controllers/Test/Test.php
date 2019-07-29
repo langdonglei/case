@@ -12,6 +12,7 @@ class Test extends Controller
     public function index()
     {
         $usr = new User();
+        dd($usr);
 
     }
 
