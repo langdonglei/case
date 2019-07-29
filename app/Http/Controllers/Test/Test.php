@@ -11,8 +11,7 @@ class Test extends Controller
     # get test
     public function index()
     {
-        $usr = new User();
-        dd($usr);
+        phpinfo();
 
     }
 
