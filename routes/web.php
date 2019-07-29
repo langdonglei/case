@@ -1,7 +1,4 @@
 <?php
-
-Route::resource('test','Test\Test');
-
 # github自动部署
 Route::any('/deploy',function(){
     $s1=$_SERVER['HTTP_X_HUB_SIGNATURE'];
@@ -16,6 +13,9 @@ Route::any('/deploy',function(){
         proc_close($proc);
     }
 });
+
+Route::resource('test','Test\Test');
+
 Route::get('/', function () {
     return redirect('/stage');
 });
