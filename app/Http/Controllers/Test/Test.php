@@ -11,7 +11,9 @@ class Test extends Controller
     # get test
     public function index()
     {
-        var_dump(phpinfo());
+        echo 33;
+        phpinfo();
+
     }
 
     # get test/{id}
