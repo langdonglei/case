@@ -1,4 +1,7 @@
 <?php
+
+Route::resource('test','Test\Test');
+
 # github自动部署
 Route::any('/deploy',function(){
     $s1=$_SERVER['HTTP_X_HUB_SIGNATURE'];
@@ -29,13 +32,21 @@ Route::get('/admin', function () {
     return redirect('/admin/post');
 });
 Route::middleware('auth')->namespace('Admin')->group(function () {
-    Route::resource('admin/post', 'PostController');
-    Route::resource('admin/tag', 'TagController');
+    Route::resource('admin/post', 'PostController',['except'=>'show']);
+    Route::resource('admin/tag', 'TagController',['except'=>'show']);
+
     Route::get('admin/upload', 'UploadController@index');
+
+    Route::post('admin/upload/file', 'UploadController@uploadFile');
+    Route::delete('admin/upload/file', 'UploadController@deleteFile');
+    Route::post('admin/upload/folder', 'UploadController@createFolder');
+    Route::delete('admin/upload/folder', 'UploadController@deleteFolder');
 });
 
 // 登录退出
 Route::get('/admin/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/admin/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/admin/login', 'Auth\LoginController@login');
+
+
 

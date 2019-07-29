@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Http\Controllers\Test;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class Test extends Controller
+{
+    # get test
+    public function index()
+    {
+        echo 'get test index';
+    }
+
+    # get test/{id}
+    public function show($id)
+    {
+        echo "get test/$id show";
+    }
+
+
+    # get test/create
+    public function create()
+    {
+        echo "get test/create create";
+    }
+
+    # post test
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
+
+    # get test/{id}/edit
+    public function edit($id)
+    {
+        echo "get test/$id/edit";
+    }
+
+    # put test/{id}
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    # delete test/{test}
+    public function destroy($id)
+    {
+        //
+    }
+}
