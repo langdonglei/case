@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Test;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -10,7 +11,8 @@ class Test extends Controller
     # get test
     public function index()
     {
-        echo 'get test index';
+        $usr = new User();
+
     }
 
     # get test/{id}
