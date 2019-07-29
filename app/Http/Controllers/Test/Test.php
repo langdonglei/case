@@ -11,7 +11,7 @@ class Test extends Controller
     # get test
     public function index()
     {
-        var_dump(User::all());
+        phpinfo();
 
     }
 
