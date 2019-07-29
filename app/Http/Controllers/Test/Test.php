@@ -11,6 +11,7 @@ class Test extends Controller
     # get test
     public function index()
     {
+        echo 444;
         echo 33;
         phpinfo();
 
