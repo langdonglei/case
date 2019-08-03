@@ -4,15 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
-use App\Jobs\PostFormFields;
-use App\Models\Post;
+use App\Models\Article;
 use App\Models\Tag;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 
-class PostController extends Controller
+class ArticleController extends Controller
 {
     protected $fieldList = [
         'title' => '',
@@ -27,9 +25,14 @@ class PostController extends Controller
         'tags' => [],
     ];
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        return view('admin.post.index', ['posts' => Post::all()]);
+        return view('admin.article.index', ['data' => Article::all()]);
     }
 
     public function create()

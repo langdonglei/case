@@ -24,7 +24,7 @@
                 <span class="caret"></span>
             </a>
             <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="/admin/logout">退出</a>
+                <a class="dropdown-item" href="/logout">退出</a>
             </div>
         </li>
     @endguest

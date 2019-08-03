@@ -7,7 +7,7 @@
                 <h3>文章 <small>» 列表</small></h3>
             </div>
             <div class="col-md-6 text-right">
-                <a href="/admin/post/create" class="btn btn-success btn-md">
+                <a href="/admin/article/create" class="btn btn-success btn-md">
                     <i class="fa fa-plus-circle"></i> 创建新文章
                 </a>
             </div>
@@ -29,18 +29,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($posts as $post)
+                    @foreach ($data as $v)
                         <tr>
-                            <td data-order="{{ $post->published_at->timestamp }}">
-                                {{ $post->published_at->format('Y-m-d g:ia') }}
-                            </td>
-                            <td>{{ $post->title }}</td>
-                            <td>{{ $post->subtitle }}</td>
+                            <td data-order="{{ $v->published_at }}">{{ $v->published_at }}</td>
+                            <td>{{ $v->title }}</td>
+                            <td>{{ $v->subtitle }}</td>
                             <td>
-                                <a href="/admin/post/{{ $post->id }}/edit" class="btn btn-xs btn-info">
+                                <a href="/admin/article/{{ $v->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> 编辑
                                 </a>
-                                <a href="/blog/{{ $post->slug }}" class="btn btn-xs btn-warning">
+                                <a href="/blog/{{ $v->slug }}" class="btn btn-xs btn-warning">
                                     <i class="fa fa-eye"></i> 查看
                                 </a>
                             </td>

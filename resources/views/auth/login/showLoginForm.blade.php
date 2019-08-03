@@ -9,15 +9,15 @@
                     <div class="card-body">
 
                         @include('admin.partials.errors')
+                        {{ url("/login") }}
+                        <form role="form" method="POST" action="{{ url("/login") }}">
 
-                        <form role="form" method="POST" action="{{ url('/admin/login') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="form-group row">
                                 <label class="col-md-4 col-form-label text-md-right">邮箱</label>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}"
-                                           autofocus>
+                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
                                 </div>
                             </div>
 
@@ -43,6 +43,7 @@
                                     <button type="submit" class="btn btn-primary">登录</button>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                 </div>

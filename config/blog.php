@@ -1,7 +1,7 @@
 <?php
 return [
-    'title' => 'My Blog',
-    'posts_per_page' => 5,
+    'title' => '',
+    'posts_per_page' => 10,
     'uploads'=>[
         'storage'=>'public',
         'webpath'=>'/storage'
