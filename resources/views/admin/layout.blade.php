@@ -25,8 +25,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbar-menu">
-            <ul class="navbar-nav mr-auto">
 
+            <ul class="navbar-nav mr-auto">
                     <li @if (Request::is('article*')) class="nav-item active" @else class="nav-item" @endif>
                         <a class="nav-link" href="article">文章</a>
                     </li>
@@ -36,7 +36,6 @@
                     <li @if (Request::is('upload*')) class="nav-item active" @else class="nav-item" @endif>
                         <a class="nav-link" href="upload">上传</a>
                     </li>
-
             </ul>
 
             <ul class="navbar-nav ml-auto">
@@ -52,6 +51,7 @@
                     </li>
 
             </ul>
+
         </div>
     </div>
 </nav>
