@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 # 前台
 Route::namespace('Stage')->group(function (){
-    Route::resource('/index','Index');
+    Route::resource('/index','IndexController');
 });
 
 # 验证

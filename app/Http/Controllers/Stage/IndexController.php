@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Stage;
 
 use App\Http\Controllers\Controller;
-use App\Models\Article;
+use App\Article;
 
 
-class Index extends Controller
+class IndexController extends Controller
 {
     public function index()
     {

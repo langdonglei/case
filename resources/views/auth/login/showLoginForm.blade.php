@@ -8,8 +8,8 @@
                     <div class="card-header">用户登录</div>
                     <div class="card-body">
 
-                        @include('admin.partials.errors')
-                        {{ url("/login") }}
+                        @include('error')
+
                         <form role="form" method="POST" action="{{ url("/login") }}">
 
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">

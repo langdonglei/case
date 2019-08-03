@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
-use App\Models\Article;
-use App\Models\Tag;
+use App\Article;
+use App\Tag;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;

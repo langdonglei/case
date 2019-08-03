@@ -11,4 +11,5 @@ return array(
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Michelf' => array($vendorDir . '/michelf/php-smartypants'),
     'Dflydev\\ApacheMimeTypes' => array($vendorDir . '/dflydev/apache-mime-types/src'),
+    'Barryvdh' => array($vendorDir . '/barryvdh/reflection-docblock/src'),
 );

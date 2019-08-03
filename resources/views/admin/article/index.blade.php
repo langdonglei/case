@@ -16,8 +16,8 @@
         <div class="row">
             <div class="col-sm-12">
 
-                @include('admin.partials.errors')
-                @include('admin.partials.success')
+                @include('error')
+                @include('success')
 
                 <table id="posts-table" class="table table-striped table-bordered">
                     <thead>
