@@ -6,14 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 
 
-class IndexController extends Controller
+class Index extends Controller
 {
     public function index()
     {
         return view('stage.index.index', [
             'data' => Article::where('published_at', '<=', now())
                 ->orderBy('published_at', 'desc')
-                ->paginate(config('blog.posts_per_page'))
+                ->paginate(config('blog.article_per_page'))
         ]);
     }
 
